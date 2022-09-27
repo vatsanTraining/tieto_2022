@@ -8,3 +8,10 @@ MUST COMPLETE
 
 
 CAN TRY
+1) Add the JPA related annotations to Doctor.java and Patient.java
+2) Add the JPA oneToMany Associations to the Doctor.java class
+3) Create a Repository extending JPARepository
+4) In the Service Class Invoke The following Five Methods from the repository 
+    - save,findAll
+5)  From the Main method test all methods of the service class  
+ 
