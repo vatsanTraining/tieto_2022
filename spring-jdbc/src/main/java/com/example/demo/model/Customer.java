@@ -13,7 +13,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Data
 
-@Component         // Class annotated with @Component will be registered as a Bean 
+@Component          
 public class Customer {
 
 	int customerId;
