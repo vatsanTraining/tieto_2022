@@ -31,4 +31,10 @@ public class ProductService {
 		return this.repo.findAll();
 	}
 	
+	
+   public List<Product> findByProductName(String srchString){
+		
+		return this.repo.findByProductName(srchString);
+	}
+	
 }

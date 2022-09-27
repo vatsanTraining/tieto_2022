@@ -20,7 +20,7 @@ public class SpringDataJpaApplication {
 	   
 	  // System.out.println("One Product with Following Details Added :="+service.save(obj));
 	 
-	   service.findAll().forEach(System.out::println);
+	   service.findByProductName("Iphone").forEach(System.out::println);
 	   
 	 ctx.close();
 	}
