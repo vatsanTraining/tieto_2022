@@ -18,15 +18,17 @@ public class SpringDataJpaApplication {
 	   
 	   ProductService service = ctx.getBean(ProductService.class);
 	   
-	   System.out.println("One Product with Following Details Added :="+service.save(obj));
+	  // System.out.println("One Product with Following Details Added :="+service.save(obj));
 	 
+	   service.findAll().forEach(System.out::println);
+	   
 	 ctx.close();
 	}
 
 	
 	@Bean
-	public Product tv() {
+	public Product phone() {
 		
-		return new Product(101, "sony tv", 23000);
+		return new Product(102, "Iphone", 63000);
 	}
 }
