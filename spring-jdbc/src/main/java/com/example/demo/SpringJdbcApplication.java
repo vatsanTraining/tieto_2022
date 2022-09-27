@@ -13,17 +13,24 @@ public class SpringJdbcApplication {
 	public static void main(String[] args) {
 	 ConfigurableApplicationContext	 ctx =SpringApplication.run(SpringJdbcApplication.class, args);
 	
-	  Customer obj = ctx.getBean(Customer.class);
-	  
-	    obj.setCustomerId(Integer.parseInt(args[0]));
-	    obj.setCustomerName(args[1]);
-	    obj.setEmail(args[2]);
-	
+	 int key =2;
+	 
 	  CustomerService service = ctx.getBean(CustomerService.class);
+
+	 if(key ==1) {
+	 
+	  Customer obj = ctx.getBean(Customer.class);
+	    obj.setCustomerId(Integer.parseInt(args[1]));
+	    obj.setCustomerName(args[2]);
+	    obj.setEmail(args[3]);
 	  
 	   System.out.println("Is Added :="+ service.save(obj));
-	   
+	 }
 	 
+	 if(key==2) {
+		 
+		 service.findAll().forEach(System.out::println);
+	 }
 	 ctx.close();
 	
 	}
