@@ -1,0 +1,24 @@
+Create a Simple Maven Project 
+Add the Dependency 
+Create a bean.xml file in resources folder 
+Configure Bean with Constructor DI
+From the Main method create a Instance of ConfigurableApplicationContext 
+Access the Bean and print the value
+
+    <dependency>
+   		<groupId>org.springframework</groupId>
+   		<artifactId>spring-core</artifactId>
+   		<version>4.2.1.RELEASE</version>
+  </dependency>
+  
+    <dependency>
+  		 <groupId>org.springframework</groupId>
+   		<artifactId>spring-webmvc</artifactId>
+   		<version>4.2.1.RELEASE</version>
+   </dependency>
+  
+     <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.0</version>
+    </dependency>
