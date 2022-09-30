@@ -106,7 +106,7 @@ public class BatchConfig {
 	@Bean
 	public Step stepOne(StepBuilderFactory sbf,StudentRepository repo) {
 		
-		 return sbf.get("")
+		 return sbf.get("studentJob")
                  .<Student,Student>chunk(2)
                  .reader(reader())
                  .processor(processor())
