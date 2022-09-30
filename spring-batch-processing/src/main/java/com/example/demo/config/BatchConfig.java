@@ -2,7 +2,11 @@ package com.example.demo.config;
 
 import java.util.List;
 
+import org.springframework.batch.core.Job;
+import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
+import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
+import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.file.FlatFileItemReader;
@@ -12,6 +16,7 @@ import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 import com.example.demo.entity.Student;
@@ -88,8 +93,31 @@ public class BatchConfig {
 		
 		FlatFileItemReader<Student> reader = new FlatFileItemReader<>();
 		
+		reader.setResource(new ClassPathResource("/students.csv"));
+		
+		 reader.setLinesToSkip(1);
+		 
 		 reader.setLineMapper(mapper());
 		 
+		 
 		 return reader;
+	}
+	
+	@Bean
+	public Step stepOne(StepBuilderFactory sbf,StudentRepository repo) {
+		
+		 return sbf.get("")
+                 .<Student,Student>chunk(2)
+                 .reader(reader())
+                 .processor(processor())
+                 .writer(writer(repo))
+                 .build() ;
+	}
+	@Bean
+	public Job jobOne(JobBuilderFactory jbf,Step stepOne) {
+		 return jbf.get("studentJob")
+	              .start(stepOne)
+	             .build();
+
 	}
 }
