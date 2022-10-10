@@ -4,6 +4,8 @@ import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
+import com.example.demo.utils.ConnectionFactory;
+
 import java.io.IOException;
 import java.net.URI;
 
@@ -38,6 +40,8 @@ public class Main {
         final HttpServer server = startServer();
         System.out.println(String.format("Jersey app started with endpoints available at "
                 + "%s%nHit Ctrl-C to stop it...", BASE_URI));
+        
+        
         System.in.read();
         server.stop();
     }

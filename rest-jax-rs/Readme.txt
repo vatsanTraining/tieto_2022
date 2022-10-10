@@ -10,5 +10,6 @@
 10) Implement the Methods of the interface
 11) Create a Service class and invoke repository methods ,handle exceptions
 12) Create a Resource class annotate it with @PATH,@GET and other such annotations
-13) Run the Application
-14) Test it with POSTMan
+13) Create a Table in the Rdbms with columns matching the java class
+14) Run the Application
+15) Test it with POSTMan
