@@ -8,3 +8,15 @@
 8) Pass entity Bean to the save Method of the service and print the return value
 9) Update the application.properties file and Run the Main method , observe the results
 10) Repeat by Calling other methods of the Service class
+===========================================================
+
+Packaging the Application
+
+1) Update the pom.xml file 
+2) Add element finalName to build Section
+3) Invoke the maven goal package , skip tests
+4) Check the Target Folder for the jar file
+5) Exit from STS 
+6) Navigate to the Target Folder 
+7) Invoke java -jar jarFileName
+

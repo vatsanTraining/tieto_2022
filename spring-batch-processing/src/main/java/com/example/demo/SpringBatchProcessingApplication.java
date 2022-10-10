@@ -16,6 +16,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class SpringBatchProcessingApplication {
 
 	public static void main(String[] args) {
+		
 	 ConfigurableApplicationContext	ctx=SpringApplication.run(SpringBatchProcessingApplication.class, args);
 	
 	        JobLauncher launcher = ctx.getBean(JobLauncher.class);
