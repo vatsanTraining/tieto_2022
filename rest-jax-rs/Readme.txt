@@ -13,3 +13,8 @@
 13) Create a Table in the Rdbms with columns matching the java class
 14) Run the Application
 15) Test it with POSTMan
+==============================================
+
+-> Client Side -> Presentation => fees.html(java script section)-> 
+-> Java Middle Tier ->java->FeeResource -> FeeService->FeeRepository->
+-> Data tier ->RDBMS->MySql->tieto_fee
