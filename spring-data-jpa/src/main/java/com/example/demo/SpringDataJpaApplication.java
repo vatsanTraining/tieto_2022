@@ -14,15 +14,15 @@ public class SpringDataJpaApplication {
 	public static void main(String[] args) {
 	 ConfigurableApplicationContext	 ctx=SpringApplication.run(SpringDataJpaApplication.class, args);
 	
-	   Product obj = ctx.getBean(Product.class);
-	   
-	   ProductService service = ctx.getBean(ProductService.class);
-	   
-	  // System.out.println("One Product with Following Details Added :="+service.save(obj));
-	 
-	   service.findByProductName("Iphone").forEach(System.out::println);
-	   
-	 ctx.close();
+//	   Product obj = ctx.getBean(Product.class);
+//	   
+//	   ProductService service = ctx.getBean(ProductService.class);
+//	   
+//	  // System.out.println("One Product with Following Details Added :="+service.save(obj));
+//	 
+//	   service.findByProductName("Iphone").forEach(System.out::println);
+//	   
+//	 ctx.close();
 	}
 
 	

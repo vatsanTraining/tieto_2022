@@ -36,5 +36,10 @@ public class ProductService {
 		
 		return this.repo.findByProductName(srchString);
 	}
+   
+   public List<Product> findByRatePerUnitGrtThan(double amount){
+	   
+	   return this.repo.getProjectByRate(amount);
+   }
 	
 }

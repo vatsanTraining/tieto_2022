@@ -20,3 +20,14 @@ Packaging the Application
 6) Navigate to the Target Folder 
 7) Invoke java -jar jarFileName
 
+=====================================
+
+
+Expose the application as REST Service
+
+1) Add a Rest Controller 
+2) ADD all the CRUD methods 
+3) Additional add a method to find the Products whose ratePerUnit is more than Rs.200
+   Use @Query with JPQL
+   
+   
